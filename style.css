@@ -1,0 +1,14 @@
+.row3 p{
+    display: none;
+}
+.maincontainer div{
+    border: 1px inset grey;
+}
+.red{
+    background-color: red;
+}
+h1{
+    background: linear-gradient(grey, white) ;
+    padding-left:25px;
+    margin: 0px;
+}

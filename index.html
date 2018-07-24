@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>jqueryfunctions</title>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                    $('.click').click(function(){
+                        $('.row1 p').html("Click listens for user mouse click");
+                    })
+                    $('.hide').click(function(){
+                        $('.row2 p').hide();
+                    })
+                    $('.show').click(function(){
+                        $('.row3 p').show();
+                    })
+                    $('.toggle').click(function(){
+                        $('.row4 p').toggle();
+                    })
+                    $(".slideUp").click(function(){
+                        $(".row5 p").slideUp();
+                    });
+                    $(".slideDown").click(function(){
+                        $(".row5 p").slideDown();
+                    });
+                    $(".slideToggle").click(function(){
+                        $(".row6 p").slideToggle();
+                    });
+                    $(".fadeIn").click(function(){
+                        $(".row7 p").fadeIn("slow");
+                    });
+                    $(".fadeOut").click(function(){
+                        $(".row7 p").fadeOut("slow");
+                    });
+                    $(".addClass").click(function(){
+                        $(".row8 p").addClass("red");
+                    });
+                    $(".before").click(function(){
+                        $(".row9 p").before("<p>$(selector).before(content,function(index))</p>");
+                    });
+                    $(".after").click(function(){
+                        $(".row10 p").after("<p>$(selector).after(content,function(index))</p>");
+                    });
+                    $(".append").click(function(){
+                        $(".row11 p").append("<b>$(selector).append(content,function(index,html))</b>");
+                    });
+                    $(".html").click(function(){
+                        $(".row12 p").html("<b>Text has been replaced!</b>");
+                    });
+                    $(".attr").click(function(){
+                        var x = $( "img" ).attr( "width" );
+                        $( ".row13 img" ).html( x );
+                        $(".row13 img").attr("width", "500");
+                        var y = $( "img" ).attr( "width" );
+                        $( ".row13 p" ).html( "set width to "+y +" from " + x );
+                    });
+                    $(".val").click(function(){
+                        // var x= $(".row14 p").val();
+                        $(".row14 p").val("<b>value has been changed</b>");
+                        var y= $(".row14 p").val();
+                        $( ".row14 p" ).html(y);
+                    });
+                    $(".text").click(function(){
+                        $(".row15 p").text("<b>Text has been replaced!</b>");
+                    });
+
+                })
+
+        </script>
+    </head>
+    <body>
+        <div class="maincontainer">
+
+            <div class="row1">
+                <h1>Click</h1>
+                <button type="button" name="button" class = "click">.click</button>
+                <p>(Click button to see description)</p>
+            </div>
+            <div class="row2">
+                <h1>Hide</h1>
+                <button type="button" name="button" class = "hide">.hide</button>
+                <p>This hides an element</p>
+            </div>
+            <div class="row3">
+                <h1>Show</h1>
+                <button type="button" name="button" class = "show">.show</button>
+                <p id="show">This hides an element</p>
+            </div>
+            <div class="row4">
+                <h1>Toggle</h1>
+                <button type="button" name="button" class = "toggle">.toggle</button>
+                <p>This toggles between hide and show</p>
+            </div>
+            <div class="row5">
+                <h1>SlideUp & SlideDown</h1>
+                <button type="button" name="button" class = "slideUp">.slideUp</button>
+                <button type="button" name="button" class = "slideDown">.slideDown</button>
+                <p>Displays/Hides the matched elements with a sliding motion. (one function per button)</p>
+            </div>
+            <div class="row6">
+                <h1>slideToggle</h1>
+                <button type="button" name="button" class = "slideToggle">.slideToggle</button>
+                <p>Displays/Hides the matched elements with a sliding motion. (in one button)</p>
+            </div>
+            <div class="row7">
+                <h1>fadeIn & fadeOut</h1>
+                <button type="button" name="button" class = "fadeIn">.fadeIn</button>
+                <button type="button" name="button" class = "fadeOut">.fadeOut</button>
+                <p> This fades in/out using slow as a paramenter (you can also set a delay in ms) </p>
+            </div>
+            <div class="row8">
+                <h1>.addclass </h1>
+                <button type="button" name="button" class = "addClass">.addClass</button>
+                <p> Assigns a class to a selected element </p>
+            </div>
+            <div class="row9">
+                <h1>.before </h1>
+                <button type="button" name="button" class = "before">.before</button>
+                <p> Assigns a class to a selected element </p>
+            </div>
+            <div class="row10">
+                <h1>.after </h1>
+                <button type="button" name="button" class = "after">.after</button>
+                <p> Assigns a class to a selected element </p>
+            </div>
+            <div class="row11">
+                <h1>.append </h1>
+                <button type="button" name="button" class = "append">.append</button>
+                <p>Inserts specified content at the end of the selected elements. (Can also add html tags)</p>
+            </div>
+            <div class="row12">
+                <h1>.html </h1>
+                <button type="button" name="button" class = "html">.html</button>
+                <p>This changes the selected content to specified inputs </p>
+            </div>
+            <div class="row13">
+                <h1>.attr</h1>
+                <button type="button" name="button" class = "attr">.attr</button>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/410bzxSrJfL._SY355_.jpg" alt="tree"
+                width="284" height="213">
+                <p>The attr() method sets or returns attributes and values of the selected elements.When this method is used to return the attribute value, it returns the value of the FIRST matched element.When this method is used to set attribute values, it sets one or more attribute/value pairs for the set of matched elements.</p>
+            </div>
+            <div class="row14">
+                <h1>.val </h1>
+                <button type="button" name="button" class = "val">.val</button>
+                <p>The val() method returns or sets the value attribute of the selected elements.When used to return value:This method returns the value of the value attribute of the FIRST matched element.When used to set value: This method sets the value of the value attribute for ALL matched elements. Note: The val() method is mostly used with HTML form elements.</p>
+            </div>
+            <div class="row15">
+                <h1>.text </h1>
+                <button type="button" name="button" class = "text">.text</button>
+                <p>Passes unstyled text into a selected element</p>
+            </div>
+        </div>
+    </body>
+</html>
